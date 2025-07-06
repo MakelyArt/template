@@ -17,6 +17,25 @@ export default function Home() {
     Get Started
   </a>
 </Link>
+    <section className="py-16 bg-gray-50" id="how-it-works">
+  <div className="max-w-4xl mx-auto px-6 text-center">
+    <h2 className="text-3xl font-bold mb-8">How It Works</h2>
+    <div className="grid sm:grid-cols-3 gap-8 text-left">
+      <div>
+        <h3 className="text-xl font-semibold mb-2">1. Enter Your Name</h3>
+        <p>Type your name and we’ll suggest a beautiful domain.</p>
+      </div>
+      <div>
+        <h3 className="text-xl font-semibold mb-2">2. Launch Instantly</h3>
+        <p>Preview and publish your portfolio site in seconds.</p>
+      </div>
+      <div>
+        <h3 className="text-xl font-semibold mb-2">3. Go Premium</h3>
+        <p>Upgrade anytime to use your own domain and customizations.</p>
+      </div>
+    </div>
+  </div>
+</section>
 </div>
   );
 }
