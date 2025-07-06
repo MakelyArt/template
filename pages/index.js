@@ -18,7 +18,7 @@ export default function Home() {
   </a>
 </Link>
     <div className="mt-16" /> {/* Adds space below the button */}
-    <section className="py-16 bg-gray-50" id="how-it-works">
+    <section id="how-it-works" className="py-16 bg-gray-50">
   <div className="max-w-4xl mx-auto px-6 text-center">
     <h2 className="text-3xl font-bold mb-8">How It Works</h2>
     <div className="grid sm:grid-cols-3 gap-8 text-left">
