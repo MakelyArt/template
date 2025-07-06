@@ -13,4 +13,7 @@ export default function Home() {
       </p>
 
       <Link href="#get-started">
-        <a className="bg-black text-white text-lg font-medium px-8 py-3 rounded-f
+  <a className="bg-black text-white text-lg font-medium px-8 py-3 rounded-full">
+    Get Started
+  </a>
+</Link>
