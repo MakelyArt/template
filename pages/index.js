@@ -46,6 +46,67 @@ export default function Home() {
           </div>
         </div>
       </section>
+          {/* FEATURES SECTION */}
+<section
+  id="features"
+  className="min-h-screen flex flex-col justify-center bg-white snap-start px-6 py-24"
+>
+  <div className="max-w-[1200px] mx-auto">
+    <h2 className="text-4xl font-bold mb-16 text-center heading-alt">Everything You Need to Launch</h2>
+
+    {/* Feature 1 */}
+    <div className="flex flex-col md:flex-row items-center mb-24 gap-10">
+      <div className="md:w-1/2">
+        <img
+          src="/features/step1.svg"
+          alt="Instant portfolio creation"
+          className="w-full rounded-xl shadow-lg"
+        />
+      </div>
+      <div className="md:w-1/2">
+        <h3 className="text-2xl font-semibold mb-4">Go Live in Seconds</h3>
+        <p className="text-gray-600 text-lg">
+          Artists deserve more time to create—not code. With Makely, you can launch a fully responsive portfolio just by typing your name.
+        </p>
+      </div>
+    </div>
+
+    {/* Feature 2 */}
+    <div className="flex flex-col md:flex-row-reverse items-center mb-24 gap-10">
+      <div className="md:w-1/2">
+        <img
+          src="/features/step2.svg"
+          alt="Domain suggestions"
+          className="w-full rounded-xl shadow-lg"
+        />
+      </div>
+      <div className="md:w-1/2">
+        <h3 className="text-2xl font-semibold mb-4">Custom Domain Suggestions</h3>
+        <p className="text-gray-600 text-lg">
+          No more domain guesswork. We automatically suggest beautiful domain names based on your artist name or brand.
+        </p>
+      </div>
+    </div>
+
+    {/* Feature 3 */}
+    <div className="flex flex-col md:flex-row items-center gap-10">
+      <div className="md:w-1/2">
+        <img
+          src="/features/step3.svg"
+          alt="Professional templates"
+          className="w-full rounded-xl shadow-lg"
+        />
+      </div>
+      <div className="md:w-1/2">
+        <h3 className="text-2xl font-semibold mb-4">Professional Templates</h3>
+        <p className="text-gray-600 text-lg">
+          Choose from modern, elegant templates designed specifically for visual artists. Responsive, customizable, and built to showcase your work.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
   );
 }
