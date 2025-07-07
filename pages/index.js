@@ -12,7 +12,7 @@ export default function Home() {
         No code. No stress.
       </p>
 
-<Link href="#get-started">
+<Link href="#how-it-works">
   <a className="bg-black text-white text-lg font-medium px-8 py-3 rounded-full">
     Get Started
   </a>
