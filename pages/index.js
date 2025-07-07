@@ -17,6 +17,9 @@ export default function Home() {
     Get Started
   </a>
 </Link>
+    <div className="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-white">
+<section id="how-it-works" className="min-h-screen py-16 bg-gray-50">
+
     <div className="mt-16" /> {/* Adds space below the button */}
     <section id="how-it-works" className="py-16 bg-gray-50">
   <div className="max-w-4xl mx-auto px-6 text-center">
