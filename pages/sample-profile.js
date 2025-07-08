@@ -1,34 +1,10 @@
 import { useState } from "react";
-import Image from "next/image";
+import fs from "fs";
+import path from "path";
 import Link from "next/link";
 
-export default function SampleProfile() {
+export default function SampleProfile({ artist }) {
   const [showContact, setShowContact] = useState(false);
-
-  const artist = {
-    name: "Jane Doe",
-    bio: "Multidisciplinary artist based in Berlin. Exploring emotions through abstract forms.",
-    images: [
-      "/art1.jpg",
-      "/art2.jpg",
-      "/art3.jpg",
-      "/art4.jpg",
-      "/art5.jpg",
-      "/art6.jpg",
-    ],
-    social: {
-      Instagram: "https://instagram.com/janedoe",
-      Twitter: "https://twitter.com/janedoe_art",
-    },
-    contact: {
-      email: "janedoe@example.com",
-      mobile: { code: "+49", number: "123456789" },
-      whatsapp: { code: "+49", number: "987654321" },
-      location: "Berlin, Germany",
-    },
-    exhibitions: ["Solo Exhibition at ART HQ, 2022"],
-    awards: ["Emerging Artist Prize, 2023"],
-  };
 
   return (
     <div className="min-h-screen bg-white px-6 py-16 max-w-[1000px] mx-auto">
@@ -70,20 +46,14 @@ export default function SampleProfile() {
           <div className="mb-3">
             <strong>Mobile:</strong>{" "}
             <select defaultValue={artist.contact.mobile.code} className="mr-2 border rounded px-2 py-1">
-              <option>+49</option>
-              <option>+971</option>
-              <option>+1</option>
-              <option>+44</option>
+              <option>+49</option><option>+971</option><option>+1</option><option>+44</option>
             </select>
             {artist.contact.mobile.number}
           </div>
           <div className="mb-3">
             <strong>WhatsApp:</strong>{" "}
             <select defaultValue={artist.contact.whatsapp.code} className="mr-2 border rounded px-2 py-1">
-              <option>+49</option>
-              <option>+971</option>
-              <option>+1</option>
-              <option>+44</option>
+              <option>+49</option><option>+971</option><option>+1</option><option>+44</option>
             </select>
             {artist.contact.whatsapp.number}
           </div>
@@ -132,4 +102,17 @@ export default function SampleProfile() {
       </div>
     </div>
   );
+}
+
+// Load artist data from JSON
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), "public", "sample-artist.json");
+  const jsonData = fs.readFileSync(filePath, "utf-8");
+  const artist = JSON.parse(jsonData);
+
+  return {
+    props: {
+      artist,
+    },
+  };
 }
