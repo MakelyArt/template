@@ -178,4 +178,4 @@ export default function CreateProfile() {
             type="text"
             value={formData.exhibitions[0]}
             onChange={(e) => handleChange(e, "exhibitions")}
-            className="w-fu
+            className="w-full"
