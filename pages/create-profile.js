@@ -178,4 +178,28 @@ export default function CreateProfile() {
             type="text"
             value={formData.exhibitions[0]}
             onChange={(e) => handleChange(e, "exhibitions")}
-            className="w-full"
+            className="w-full border rounded p-2"
+          />
+        </div>
+        <div>
+          <label className="block font-medium mb-2">Awards (optional)</label>
+          <input
+            type="text"
+            value={formData.awards[0]}
+            onChange={(e) => handleChange(e, "awards")}
+            className="w-full border rounded p-2"
+          />
+        </div>
+
+        <div className="text-center">
+          <button
+            type="submit"
+            className="bg-black text-white px-8 py-3 rounded-full text-lg font-medium hover:scale-105 transition"
+          >
+            Preview Your Profile
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+}
