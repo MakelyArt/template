@@ -100,3 +100,5 @@ export default function PreviewProfile() {
               <ul className="list-disc list-inside text-gray-600">
                 {artist.awards.map((award, i) => (
                   <li key={i}>{award}</li>
+  ))}
+</ul>
