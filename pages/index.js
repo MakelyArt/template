@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-export default fimport Link from "next/link";
-
 export default function Home() {
   return (
     <div className="h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth">
