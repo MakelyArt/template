@@ -4,9 +4,7 @@ module.exports = {
     "./components/**/*.{js,jsx}"
   ],
   theme: {
-    extend: {
-  scrollSnapType: ['responsive'],
-}
+    extend: {},
   },
   plugins: [],
 }
