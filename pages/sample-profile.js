@@ -88,7 +88,7 @@ export default function SampleProfile({ artist }) {
         <p className="text-sm text-gray-500 mb-2">Follow:</p>
         <div className="flex justify-center space-x-6 text-gray-700 text-lg">
           {Object.entries(artist.social).map(([platform, url], idx) => (
-            <a
+            <Link
               key={idx}
               href={url}
               target="_blank"
@@ -96,7 +96,7 @@ export default function SampleProfile({ artist }) {
               className="hover:text-black transition"
             >
               {platform}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

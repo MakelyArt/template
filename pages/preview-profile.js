@@ -27,9 +27,9 @@ export default function Home() {
           No code. No stress.
         </p>
         <Link href="#how-it-works">
-          <a className="bg-black text-white text-lg font-medium px-8 py-3 rounded-full">
+          <span className="bg-black text-white text-lg font-medium px-8 py-3 rounded-full">
             Get Started
-          </a>
+          </span>
         </Link>
       </section>
 
@@ -105,7 +105,7 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-6">Start Your Portfolio Today</h2>
         <p className="text-lg mb-8">Claim your name, pick a template, and go live.</p>
         <Link href="#hero">
-          <a className="bg-white text-black px-8 py-3 rounded-full text-lg font-medium">Claim Your Free Site</a>
+          <span  className="bg-white text-black px-8 py-3 rounded-full text-lg font-medium">Claim Your Free Site</span>
         </Link>
       </section>
 
