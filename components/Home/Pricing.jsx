@@ -17,8 +17,7 @@ const Pricing = () => {
         artworks: "Up to 5 artworks",
         blog: "1 Blog post",
         ecommerce: false,
-        support: "Community",
-        analytics: false,
+        support: true,
       },
     },
     {
@@ -32,8 +31,7 @@ const Pricing = () => {
         artworks: "Up to 100 artworks",
         blog: "Up to 100 blog posts",
         ecommerce: false,
-        support: "Email Support",
-        analytics: true,
+        support: true,
       },
     },
     {
@@ -48,8 +46,7 @@ const Pricing = () => {
         artworks: "Unlimited Artworks",
         blog: "Unlimited Blog Posts",
         ecommerce: true,
-        support: "Priority Support",
-        analytics: true,
+        support: true,
       },
     },
   ];
@@ -61,7 +58,6 @@ const Pricing = () => {
     blog: "Blog Posts",
     ecommerce: "E-commerce",
     support: "Support",
-    analytics: "Analytics",
   };
 
   const formatPrice = (plan) => {
@@ -82,26 +78,23 @@ const Pricing = () => {
 
   return (
     <motion.section
-      className='py-24 px-4'
+      className='py-[44px] md:py-[60px]  px-[20px] border-b-[10px] border-white'
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
-      id="pricing"
+      id='pricing'
       transition={{ duration: 0.6 }}>
-      <div className='max-w-7xl mx-auto'>
+      <div className='max-w-[1000px] mx-auto'>
         {/* Header */}
         <motion.div
-          className='text-center mb-16'
+          className='text-center mb-8'
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}>
-          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-[800] tracking-tight mb-6 text-[#1a202c]'>
-            PRICING
+          <h2 className='text-[30px] md:text-[44px] font-[800] tracking-tight mb-3 text-black'>
+            Pricing
           </h2>
-          <p className='text-xl text-[#4a5568] mb-8'>
-            Choose the perfect plan for your creative journey
-          </p>
 
           {/* Toggle Switch */}
           <motion.div
@@ -111,32 +104,32 @@ const Pricing = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}>
             <span
-              className={`text-lg font-[600] transition-colors ${
-                !isYearly ? "text-[#1a202c]" : "text-[#4a5568]"
+              className={`text-[14px] leading-[1] font-[600] transition-colors ${
+                !isYearly ? "text-black" : "text-[#4a5568]"
               }`}>
               Monthly
             </span>
             <motion.button
-              className='relative w-16 h-8 bg-gray-200 rounded-full p-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2'
+              className='relative w-12 h-6 bg-gray-200 rounded-full p-1 transition-colors duration-300'
               style={{ backgroundColor: isYearly ? "#1a202c" : "#e2e8f0" }}
               onClick={() => setIsYearly(!isYearly)}
               whileTap={{ scale: 0.95 }}>
               <motion.div
-                className='w-6 h-6 bg-white rounded-full shadow-md'
-                animate={{ x: isYearly ? 32 : 0 }}
+                className='w-4 h-4 bg-white rounded-full shadow-md'
+                animate={{ x: isYearly ? 24 : 0 }}
                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
               />
             </motion.button>
             <span
-              className={`text-lg font-[600] transition-colors ${
-                isYearly ? "text-[#1a202c]" : "text-[#4a5568]"
+              className={`text-[14px] leading-[1] font-[600] transition-colors ${
+                isYearly ? "text-black" : "text-[#4a5568]"
               }`}>
               Yearly
             </span>
           </motion.div>
           {isYearly && (
             <motion.p
-              className='text-sm text-green-600 font-[600]'
+              className='text-[12px] text-green-600 font-[600]'
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}>
@@ -169,7 +162,7 @@ const Pricing = () => {
               <div className={`text-center ${plan.popular ? "pt-12 pb-6 px-6" : "p-6"}`}>
                 <h3
                   className={`text-2xl font-[800] mb-2 ${
-                    plan.popular ? "text-white" : "text-[#1a202c]"
+                    plan.popular ? "text-white" : "text-black"
                   }`}>
                   {plan.name}
                   {plan.comingSoon && (
@@ -178,9 +171,7 @@ const Pricing = () => {
                 </h3>
                 <div className='mb-3'>
                   <span
-                    className={`text-4xl font-[800] ${
-                      plan.popular ? "text-white" : "text-[#1a202c]"
-                    }`}>
+                    className={`text-4xl font-[800] ${plan.popular ? "text-white" : "text-black"}`}>
                     {formatPrice(plan)}
                   </span>
                 </div>
@@ -200,7 +191,7 @@ const Pricing = () => {
                       style={{ borderColor: plan.popular ? "rgba(255,255,255,0.2)" : "#e2e8f0" }}>
                       <span
                         className={`font-[600] text-sm ${
-                          plan.popular ? "text-white" : "text-[#1a202c]"
+                          plan.popular ? "text-white" : "text-black"
                         }`}>
                         {featureLabels[key]}:
                       </span>
@@ -241,58 +232,58 @@ const Pricing = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}>
-          <div className='bg-white border-2 border-gray-200 rounded-2xl overflow-hidden shadow-lg'>
+          <div className='bg-white border-2 border-gray-200 rounded-[12px] overflow-hidden'>
             {/* Header */}
             <div className='grid grid-cols-4'>
               <div className='p-8 bg-gray-50'></div>
               {plans.map((plan, index) => (
                 <motion.div
                   key={plan.name}
-                  className={`relative text-center border-l-2 border-gray-200 ${
+                  className={`relative text-center border-l-1 border-gray-200 ${
                     plan.popular ? "bg-black text-white" : "bg-gray-50"
-                  } ${plan.popular ? "pt-12 pb-8 px-6" : "p-8"}`}
+                  } p-5 pt-7`}
                   initial={{ y: -10, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}>
                   {plan.popular && (
                     <div className='absolute top-0 left-0 right-0 flex justify-center'>
-                      <span className='bg-white text-black px-4 py-2 text-xs font-[700] border-2 border-black border-t-0 rounded-b-lg'>
+                      <span className='bg-white text-black px-4 py-1 text-[10px] font-[700] border-2 border-black border-t-0 rounded-b-lg'>
                         MOST POPULAR
                       </span>
                     </div>
                   )}
 
                   <h3
-                    className={`text-2xl font-[800] mb-3 ${
-                      plan.popular ? "text-white" : "text-[#1a202c]"
+                    className={`text-[18px] leading-[1] font-[800] ${
+                      plan.popular ? "text-white" : "text-black"
                     }`}>
                     {plan.name}
                     {plan.comingSoon && (
-                      <span className='text-sm ml-2 opacity-70'>(Coming Soon)</span>
+                      <span className='text-[14px] ml-2 opacity-70'>(Coming Soon)</span>
                     )}
                   </h3>
-                  <div className='mb-3'>
+                  <div className='my-2'>
                     <span
-                      className={`text-3xl font-[800] ${
-                        plan.popular ? "text-white" : "text-[#1a202c]"
+                      className={`text-[24px] leading-[1] font-[800] ${
+                        plan.popular ? "text-white" : "text-black"
                       }`}>
                       {formatPrice(plan)}
                     </span>
                   </div>
-                  {isYearly && getSavings(plan) && (
+                  {/* {isYearly && getSavings(plan) && (
                     <div className='mb-4'>
                       <span className='inline-block text-xs bg-green-100 text-green-800 px-3 py-1 rounded-full font-[600]'>
                         {getSavings(plan)}
                       </span>
                     </div>
-                  )}
+                  )} */}
 
                   <motion.button
-                    className={`w-full py-3 px-6 rounded-xl font-[700] text-sm transition-all duration-300 ${
+                    className={`w-full py-2 px-6 rounded-[5px] font-[500] text-sm transition-all duration-300 ${
                       plan.popular
                         ? "bg-white text-black hover:bg-gray-100"
-                        : "bg-black text-white hover:bg-gray-800"
+                        : "bg-black text-white hover:bg-black/90"
                     } ${plan.comingSoon ? "opacity-50 cursor-not-allowed" : ""}`}
                     disabled={plan.comingSoon}
                     whileHover={!plan.comingSoon ? { scale: 1.02 } : {}}
@@ -311,16 +302,18 @@ const Pricing = () => {
             {Object.entries(featureLabels).map(([key, label], rowIndex) => (
               <motion.div
                 key={key}
-                className='grid grid-cols-4 border-t-2 border-gray-200 hover:bg-gray-50 transition-colors duration-300'
+                className='grid grid-cols-4 border-t border-gray-200 hover:bg-gray-50 transition-colors duration-300'
                 initial={{ x: -20, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: rowIndex * 0.05 }}>
-                <div className='p-6 font-[700] text-[#1a202c] text-lg bg-gray-50'>{label}</div>
-                {plans.map((plan, planIndex) => (
+                <div className='p-4 font-[700] text-black text-[16px] leading-[1] bg-gray-50'>
+                  {label}
+                </div>
+                {plans.map((plan) => (
                   <div
                     key={`${plan.name}-${key}`}
-                    className={`p-6 text-center border-l-2 border-gray-200 font-[500] ${
+                    className={`p-4 text-center border-l border-gray-200 font-[400]  text-[14px] my-1 ${
                       plan.popular ? "bg-gray-50" : "bg-white"
                     }`}>
                     <span className='text-[#4a5568] break-words'>
@@ -343,21 +336,15 @@ const Pricing = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          className='text-center mt-16'
+          className='text-center mt-8'
           initial={{ scale: 0.95, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}>
-          <p className='text-lg text-[#4a5568] mb-6'>
-            Need a custom solution?{" "}
-            <Link href='#' className='text-black font-[700] underline hover:no-underline'>
-              Contact us
-            </Link>
-          </p>
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
             <Link
               href='#'
-              className='inline-block bg-black text-white text-lg sm:text-xl font-[700] uppercase px-12 sm:px-16 py-4 sm:py-5 rounded-full transition-all duration-300 tracking-wide hover:bg-gray-800'>
+              className='group bg-black text-white text-[14px] sm:text-[16px]  leading-[1.1] font-[700] px-[24px] sm:px-[24px] py-[12px] sm:py-[14px] rounded-full transition-all duration-300 inline-flex items-center space-x-3 shadow-lg hover:shadow-xl'>
               Start Your Journey
             </Link>
           </motion.div>

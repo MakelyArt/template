@@ -35,7 +35,7 @@ const Testimonial = () => {
   return (
     <motion.section
       id='testimonials'
-      className='py-24 px-4 bg-gray-50'
+      className='py-[44px] md:py-[60px] px-[20px] bg-gray-50 border-b-[10px] border-white'
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
@@ -43,12 +43,12 @@ const Testimonial = () => {
       <div className='max-w-7xl mx-auto'>
         {/* Header */}
         <motion.div
-          className='text-center mb-16'
+          className='text-center mb-8'
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}>
-          <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-[44px] font-[800] tracking-tight mb-4 text-[#1a202c]'>
+          <h2 className='text-[30px] lg:text-[44px] font-[800] tracking-tight mb-4 text-black'>
             What Artists Say
           </h2>
           <p className='text-xl text-[#4a5568] max-w-2xl mx-auto'>
@@ -57,7 +57,7 @@ const Testimonial = () => {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:px-[40px]'>
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -69,29 +69,18 @@ const Testimonial = () => {
               whileHover={{ y: -5 }}>
               {/* Background Quote Icon */}
               <div className='absolute top-6 right-6 opacity-5 group-hover:opacity-10 transition-opacity duration-300'>
-                <FaQuoteRight className='w-16 h-16 text-[#1a202c]' />
+                <FaQuoteRight className='w-16 h-16 text-black' />
               </div>
-
-              {/* Star Rating */}
-              {/* <motion.div
-                className="mb-6"
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.15 + 0.2 }}
-              >
-                <StarRating rating={testimonial.rating} />
-              </motion.div> */}
 
               {/* Quote */}
               <blockquote className='relative'>
-                {/* <div className='absolute -top-2 -left-1 text-4xl text-[#1a202c] opacity-20 font-serif'>
+                {/* <div className='absolute -top-2 -left-1 text-4xl text-black opacity-20 font-serif'>
                   "
                 </div> */}
                 <p className='text-lg leading-relaxed text-[#4a5568] font-[400] relative z-10'>
                   {testimonial.message}
                 </p>
-                {/* <div className='absolute -bottom-4 -right-1 text-4xl text-[#1a202c] opacity-20 font-serif rotate-180'>
+                {/* <div className='absolute -bottom-4 -right-1 text-4xl text-black opacity-20 font-serif rotate-180'>
                   "
                 </div> */}
               </blockquote>
@@ -120,20 +109,20 @@ const Testimonial = () => {
                 </motion.div>
 
                 <div>
-                  <h4 className='font-[700] text-[#1a202c] text-lg'>{testimonial.name}</h4>
+                  <h4 className='font-[700] text-black text-lg'>{testimonial.name}</h4>
                   <p className='text-[#4a5568] text-sm font-[500]'>{testimonial.role}</p>
                 </div>
               </motion.div>
 
               {/* Hover Effect Border */}
-              <div className='absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#1a202c] transition-all duration-300 pointer-events-none'></div>
+              <div className='absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-black transition-all duration-300 pointer-events-none'></div>
             </motion.div>
           ))}
         </div>
 
         {/* Bottom CTA */}
         <motion.div
-          className='text-center mt-16'
+          className='text-center mt-8'
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -141,12 +130,15 @@ const Testimonial = () => {
           <p className='text-lg text-[#4a5568] mb-6'>
             Ready to join our community of successful artists?
           </p>
-          <motion.button
-            className='bg-[#1a202c] text-white px-8 py-4 rounded-full font-[700] text-lg hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl'
+          {/* <motion.button
+            className='bg-black text-white px-8 py-4 rounded-full font-[700] text-lg hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl'
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}>
-            Start Your Portfolio Today
-          </motion.button>
+            Start Your Website Today
+          </motion.button> */}
+          <button className='group bg-black hover:scale-[1.04] text-white text-[14px] sm:text-[16px]  leading-[1.1] font-[700] px-[24px] sm:px-[24px] py-[12px] sm:py-[14px] rounded-full transition-all duration-300 inline-flex items-center space-x-3 shadow-lg hover:shadow-xl'>
+            Start Your Website Today
+          </button>
         </motion.div>
       </div>
     </motion.section>
