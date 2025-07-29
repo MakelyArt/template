@@ -7,6 +7,7 @@ import ProPlan from "../components/Home/ProPlan";
 import Pricing from "../components/Home/Pricing";
 import Footer from "../components/Home/Footer";
 import Banner from "../components/Home/Banner";
+import GoToTopButton from "../components/GoToTopButton";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Testimonial />
       <ProPlan />
       <Pricing />
+      <GoToTopButton />
       <Footer />
     </div>
   );

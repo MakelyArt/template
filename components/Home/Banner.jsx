@@ -5,14 +5,14 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <div className='w-full bg-[#DFE2DC]/70 md:min-h-screen flex items-center justify-center border-b-[10px] border-white'>
+    <div className='w-full bg-[#DFE2DC]/70 md:min-h-screen   flex items-center justify-center border-b-[10px] border-white'>
       <motion.section
         className='py-[44px] md:py-[60px]  px-[20px] w-full relative'
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}>
-        <div className='max-w-6xl mx-auto w-full px-[20px] relative'>
+        <div className='max-w-6xl mx-auto w-full px-[20px] relative md:pb-0 pb-[150px]'>
           <div className='max-w-[570px] relative z-10'>
             <motion.h2
               className='text-[50px] md:text-[90px] leading-[0.9] font-[900] mb-6 tracking-tight text-black '
@@ -42,7 +42,7 @@ const Banner = () => {
           </div>
 
           <motion.div
-            className='absolute right-0 bottom-[-20px] md:bottom-[-100px] hidden md:block'
+            className='absolute right-0 bottom-[-20px] md:bottom-[-100px]'
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -53,7 +53,7 @@ const Banner = () => {
               alt='Creative artist'
               width={600}
               height={600}
-              className='w-[200px] h-[200px] lg:w-[600px] lg:h-[600px] object-contain'
+              className='w-[280px] h-[280px] lg:w-[600px] lg:h-[600px] object-contain'
             />
           </motion.div>
         </div>

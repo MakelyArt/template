@@ -160,15 +160,17 @@ const Pricing = () => {
               )}
 
               <div className={`text-center ${plan.popular ? "pt-12 pb-6 px-6" : "p-6"}`}>
-                <h3
-                  className={`text-2xl font-[800] mb-2 ${
-                    plan.popular ? "text-white" : "text-black"
-                  }`}>
-                  {plan.name}
-                  {plan.comingSoon && (
-                    <span className='text-sm ml-2 opacity-70'>(Coming Soon)</span>
-                  )}
-                </h3>
+                {plan.name !== "Free" && (
+                  <h3
+                    className={`text-2xl font-[800] mb-2 ${
+                      plan.popular ? "text-white" : "text-black"
+                    }`}>
+                    {plan.name}
+                    {plan.comingSoon && (
+                      <span className='text-sm ml-2 opacity-70'>(Coming Soon)</span>
+                    )}
+                  </h3>
+                )}
                 <div className='mb-3'>
                   <span
                     className={`text-4xl font-[800] ${plan.popular ? "text-white" : "text-black"}`}>
@@ -239,7 +241,7 @@ const Pricing = () => {
               {plans.map((plan, index) => (
                 <motion.div
                   key={plan.name}
-                  className={`relative text-center border-l-1 border-gray-200 ${
+                  className={`relative text-center flex flex-col items-center justify-end border-l-1 border-gray-200 ${
                     plan.popular ? "bg-black text-white" : "bg-gray-50"
                   } p-5 pt-7`}
                   initial={{ y: -10, opacity: 0 }}
@@ -254,15 +256,17 @@ const Pricing = () => {
                     </div>
                   )}
 
-                  <h3
-                    className={`text-[18px] leading-[1] font-[800] ${
-                      plan.popular ? "text-white" : "text-black"
-                    }`}>
-                    {plan.name}
-                    {plan.comingSoon && (
-                      <span className='text-[14px] ml-2 opacity-70'>(Coming Soon)</span>
-                    )}
-                  </h3>
+                  {plan.name !== "Free" && (
+                    <h3
+                      className={`text-[18px] leading-[1] font-[800] ${
+                        plan.popular ? "text-white" : "text-black"
+                      }`}>
+                      {plan.name}
+                      {plan.comingSoon && (
+                        <span className='text-[14px] ml-2 opacity-70'>(Coming Soon)</span>
+                      )}
+                    </h3>
+                  )}
                   <div className='my-2'>
                     <span
                       className={`text-[24px] leading-[1] font-[800] ${

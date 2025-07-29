@@ -161,7 +161,7 @@ export default function HowItWorks() {
                   <h3 className='text-[20px] sm:text-[24px] font-[700] text-black tracking-tight'>
                     {step.title}
                   </h3>
-                  <p className='text-[14px] sm:text-[16px] text-[#4a5568] font-[400] leading-relaxed'>
+                  <p className='text-[16px] sm:text-[18px] text-[#4a5568] font-[400] leading-relaxed'>
                     {step.description}
                   </p>
                 </div>
