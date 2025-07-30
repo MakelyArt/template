@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
 
 const Banner = () => {
   return (
@@ -26,7 +27,7 @@ const Banner = () => {
             </motion.h2>
 
             <motion.p
-              className='font-[500] text-lg md:text-[24px] text-[#4a5568] leading-[1.2]  mb-10'
+              className='font-[500] text-[16px] md:text-[18px] text-[#4a5568] leading-[1.2]  mb-10'
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -37,7 +38,8 @@ const Banner = () => {
             <Link
               href='#'
               className='group bg-black hover:scale-[1.04] text-white text-[14px] sm:text-[16px]  leading-[1.1] font-[700] px-[24px] sm:px-[24px] py-[12px] sm:py-[14px] rounded-full transition-all duration-300 inline-flex items-center space-x-3 shadow-lg hover:shadow-xl'>
-              Get Started
+              <span>Get Started</span>
+              <FaArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
             </Link>
           </div>
 

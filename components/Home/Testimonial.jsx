@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 // import { Quote } from "lucide-react"
 
-import { FaQuoteRight } from "react-icons/fa";
+import { FaArrowRight, FaQuoteRight } from "react-icons/fa";
 
 const testimonials = [
   {
@@ -51,7 +51,7 @@ const Testimonial = () => {
           <h2 className='text-[30px] lg:text-[44px] font-[800] tracking-tight mb-4 text-black'>
             What Artists Say
           </h2>
-          <p className='text-xl text-[#4a5568] max-w-2xl mx-auto'>
+          <p className='text-[16px] md:text-[18px] text-[#4a5568] max-w-2xl mx-auto'>
             Join thousands of artists who trust Makely to showcase their work professionally
           </p>
         </motion.div>
@@ -127,7 +127,7 @@ const Testimonial = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}>
-          <p className='text-lg text-[#4a5568] mb-6'>
+          <p className='text-[16px] md:text-[18px] text-[#4a5568] mb-6'>
             Ready to join our community of successful artists?
           </p>
           {/* <motion.button
@@ -137,7 +137,9 @@ const Testimonial = () => {
             Start Your Website Today
           </motion.button> */}
           <button className='group bg-black hover:scale-[1.04] text-white text-[14px] sm:text-[16px]  leading-[1.1] font-[700] px-[24px] sm:px-[24px] py-[12px] sm:py-[14px] rounded-full transition-all duration-300 inline-flex items-center space-x-3 shadow-lg hover:shadow-xl'>
-            Start Your Website Today
+            
+            <span>Start Your Website Today</span>
+            <FaArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
           </button>
         </motion.div>
       </div>

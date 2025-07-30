@@ -66,7 +66,7 @@ const DiamondIcon = () => (
 
 const AnimatedArrow = ({ delay = 0 }) => (
   <motion.div
-    className='hidden lg:flex items-center justify-center mx-8'
+    className='hidden lg:flex items-center justify-center mx-16'
     initial={{ opacity: 0, x: -20 }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
@@ -121,7 +121,7 @@ export default function HowItWorks() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}>
-      <div className='flex flex-col justify-center items-center space-y-10 max-w-7xl w-full mx-auto '>
+      <div className='flex flex-col justify-center items-center space-y-10 max-w-[1100px] w-full mx-auto '>
         {/* Header */}
         <motion.div
           className='text-center space-y-4'
@@ -142,7 +142,7 @@ export default function HowItWorks() {
           {steps.map((step, index) => (
             <div key={index} className='flex items-center'>
               <motion.div
-                className='flex flex-col items-center text-center space-y-4 max-w-[260px]'
+                className='flex flex-col items-center text-center space-y-4 max-w-[250px]'
                 initial={{ y: 40, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}

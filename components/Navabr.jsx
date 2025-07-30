@@ -19,11 +19,11 @@ const links = [
 const Navabr = () => {
   return (
     <motion.nav
-      className='w-full h-auto relative z-50'
+      className='w-full h-auto relative z-50 border-b-[10px] border-white'
       initial={{ y: -30, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}>
-      <div className='max-w-7xl w-full mx-auto flex flex-col sm:flex-col lg:flex-row justify-between items-center py-6 px-4 space-y-4 lg:space-y-0'>
+      <div className='max-w-[1100px] w-full mx-auto flex flex-col sm:flex-col lg:flex-row justify-between items-center py-6 px-4 space-y-4 lg:space-y-0'>
         <motion.div
           className='inline-block'
           initial={{ scale: 0.9, opacity: 0 }}

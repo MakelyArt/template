@@ -9,7 +9,7 @@ const Benifits = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}>
-      <div className='max-w-7xl w-full mx-auto flex flex-col justify-center text-black'>
+      <div className='max-w-[1100px] w-full mx-auto flex flex-col justify-center text-black'>
         <motion.h2
           className='text-[26px] md:text-[34px] font-[800] mb-6 tracking-wide text-black '
           initial={{ x: -40, opacity: 0 }}

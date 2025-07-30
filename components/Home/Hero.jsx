@@ -41,7 +41,7 @@ const Hero = () => {
 
         {/* Badge */}
         <motion.div
-          className='inline-flex items-center space-x-2 bg-black text-white px-4 py-1.5 rounded-full text-[12px] font-[600] uppercase tracking-wider mb-8'
+          className='inline-flex items-center space-x-2 bg-transparent border border-black text-black px-4 py-1.5 rounded-full text-[12px] font-[600] uppercase tracking-wider mb-8'
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}>

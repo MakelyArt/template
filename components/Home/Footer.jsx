@@ -35,10 +35,10 @@ const Footer = () => {
       <div className='max-w-[1100px] mx-auto px-[20px]'>
         {/* Main Footer Content */}
         <div className='py-10'>
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-12'>
+          <div className='flex flex-col md:flex-row gap-12'>
             {/* Company Info */}
             <motion.div
-              className='space-y-4'
+              className='space-y-4 md:w-[50%]'
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
@@ -55,35 +55,44 @@ const Footer = () => {
               </p>
             </motion.div>
 
-            {/* Contact Email */}
-            <motion.div
-              className='flex items-center md:justify-center space-x-2 group cursor-pointer'
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}>
-              <div className='w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-black/90 transition-colors duration-300'>
-                <CiMail className='w-5 h-5 text-white' />
-              </div>
-              <div>
-                <p className='text-sm font-[600] leading-[1] text-[#4a5568] uppercase tracking-wider'>
-                  Contact Us
-                </p>
-                <a
-                  href='mailto:hello@makely.art'
-                  className='text-lg leading-[1] mt-2 font-[700] text-black hover:text-gray-600 transition-colors duration-300'>
-                  hello@makely.art
-                </a>
-              </div>
-            </motion.div>
-
-            {/* Legal */}
-            <div className='flex md:items-end flex-col'>
+            <div className='flex md:items-end flex-col md:w-[25%]'>
               <motion.div
                 className='space-y-2'
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}>
-                <h3 className='font-[800] text-[16px] text-black uppercase tracking-wider'>Legal</h3>
+                <h3 className='font-[800] text-[16px] text-black uppercase tracking-wider'>
+                  Contact Us
+                </h3>
+                <ul className='space-y-2'>
+                    <motion.li
+                      initial={{ x: -10, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.5  }}>
+                      <a
+                        href={"#"}
+                        className='text-[#4a5568] text-[14px] hover:text-black transition-colors duration-300 font-[500] relative group'>
+                        hello@makely.art
+                        <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full'></span>
+                      </a>
+                    </motion.li>
+                </ul>
+              </motion.div>
+            </div>
+
+            {/* Legal */}
+            <div className='flex md:items-end flex-col md:w-[25%]'>
+              <motion.div
+                className='space-y-2'
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}>
+                <h3 className='font-[800] text-[16px] text-black uppercase tracking-wider'>
+                  Legal
+                </h3>
                 <ul className='space-y-2'>
                   {legalLinks.map((link, index) => (
                     <motion.li
@@ -103,6 +112,8 @@ const Footer = () => {
                 </ul>
               </motion.div>
             </div>
+          
+          
           </div>
         </div>
 
