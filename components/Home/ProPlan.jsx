@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Generates a vertical floating animation
 const generateFloatingVariant = (duration, delay = 0) => ({
   animate: {
-    y: [0, -40, 0],
+    y: [0, -30, 0],
     transition: {
       duration,
+      rotate: 45,
       delay,
       repeat: Infinity,
       ease: "easeInOut",
@@ -31,16 +31,21 @@ const ProPlan = () => {
     return (
       <motion.div
         key={`float-${i}`}
-        className='absolute z-0 rounded-sm !rotate-45 opacity-10 pointer-events-none'
+        className='absolute z-0 rounded-sm opacity-20 pointer-events-none'
         style={{
           width: size,
           height: size,
           backgroundColor: color,
           top: `${top}%`,
           left: `${left}%`,
+          willChange: "transform",
         }}
         variants={generateFloatingVariant(duration, delay)}
         animate='animate'
+        initial={{
+          y: 0,
+          rotate: 45,
+        }}
       />
     );
   });
@@ -69,7 +74,7 @@ const ProPlan = () => {
           </h1>
 
           <p className='text-xl sm:text-2xl text-[#4a5568] font-[400] max-w-3xl mx-auto leading-relaxed'>
-            Transform your portfolio into a powerful storefront. From{" "}
+            Transform your websites into a powerful storefront. From{" "}
             <span className='font-[700] text-black'>"Inquire Now"</span> to{" "}
             <span className='font-[700] text-black'>"Buy Now"</span> in one simple click.
           </p>
