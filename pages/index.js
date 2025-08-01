@@ -27,7 +27,11 @@ export default function Home() {
         <meta property='og:url' content='https://www.makely.art' />
         <meta property='og:type' content='website' />
         <link rel='canonical' href='https://www.makely.art' />
+
+        <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+        <link rel='alternate icon' href='/favicon.ico' />
       </Head>
+
       <div className='w-full mx-auto bg-[#f8f9fa] overflow-x-hidden'>
         <Navabr />
         <Hero />
